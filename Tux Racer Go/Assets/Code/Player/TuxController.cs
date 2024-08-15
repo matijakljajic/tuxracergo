@@ -51,11 +51,11 @@ public class TuxController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            player.AddRelativeForce(Vector3.right * moveSpeed * 1.5f);
+            player.AddRelativeForce(Vector3.right * moveSpeed * 0.5f);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            player.AddRelativeForce(Vector3.left * moveSpeed * 1.5f);
+            player.AddRelativeForce(Vector3.left * moveSpeed * 0.5f);
         }
     }
 

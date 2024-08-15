@@ -13,7 +13,7 @@ public class ChunkGenerator : MonoBehaviour
         
         if (other.gameObject.CompareTag("Chunk Generation"))
         {
-            Instantiate(chunk, new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z + 501), Quaternion.identity);
+            Instantiate(chunk, new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z + 2801), Quaternion.identity);
         }
 
     }
