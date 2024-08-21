@@ -11,6 +11,7 @@ public class ChunkDestructor : MonoBehaviour
         if (other.gameObject.CompareTag("Chunk Destruction"))
         {
             Destroy(gameObject);
+            Debug.Log("Object Destroyed!");
         }
 
     }

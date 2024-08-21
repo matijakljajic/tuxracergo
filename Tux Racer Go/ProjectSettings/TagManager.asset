@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Chunk Generation
   - Chunk Destruction
+  - Collectable
   layers:
   - Default
   - TransparentFX

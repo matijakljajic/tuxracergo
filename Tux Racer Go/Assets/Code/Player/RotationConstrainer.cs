@@ -12,19 +12,15 @@ public class RotationConstrainer : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Get current rotation
         Vector3 currentRotation = transform.localEulerAngles;
 
-        // Convert the X rotation to a value between -180 and 180
         if (currentRotation.x > 180f)
         {
             currentRotation.x -= 360f;
         }
 
-        // Clamp the rotation within the allowed range
         currentRotation.x = Mathf.Clamp(currentRotation.x, minXRotation, maxXRotation);
 
-        // Apply the clamped rotation
         transform.localEulerAngles = currentRotation;
     }
 }

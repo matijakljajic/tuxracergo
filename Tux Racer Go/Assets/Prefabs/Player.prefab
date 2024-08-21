@@ -79,6 +79,7 @@ Transform:
   m_Children:
   - {fileID: 1102743842815459817}
   - {fileID: 7381561253664247199}
+  - {fileID: 8369853170432196943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &5776500779932786176
@@ -90,7 +91,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8369853170432196943}
+  - component: {fileID: 3796303218364459476}
   - component: {fileID: 4431072260279850152}
+  - component: {fileID: 1799993757963706131}
   m_Layer: 0
   m_Name: Delete Chunk Trigger
   m_TagString: Chunk Destruction
@@ -107,12 +110,39 @@ Transform:
   m_GameObject: {fileID: 5776500779932786176}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1000, z: 0}
+  m_LocalPosition: {x: 0, y: -1600.0005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1102743842815459817}
+  m_Father: {fileID: 3467617684883920174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &3796303218364459476
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776500779932786176}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &4431072260279850152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134,6 +164,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 500, y: 200, z: 500}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1799993757963706131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776500779932786176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1d5e031c04fd74b802d8fba9b08fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1102743842815459817}
 --- !u!1 &6446373795120804517
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +241,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 5.25
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -300,10 +343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 815056c4ae596624fb9686a39df39d01, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8369853170432196943}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 815056c4ae596624fb9686a39df39d01, type: 3}
       insertIndex: -1
@@ -320,6 +360,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 815056c4ae596624fb9686a39df39d01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8039096712965401415}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 815056c4ae596624fb9686a39df39d01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1295587478231382709}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 815056c4ae596624fb9686a39df39d01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 132406421865115286}
@@ -419,6 +462,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldSpeed: 3000
   moveSpeed: 3000
+--- !u!114 &1295587478231382709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290036883150576467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0a6905aa0a1ab4b951a2e7143d85c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &132406421865115286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,7 +486,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba59f8b9bdc40794cbcf7eacf2c22c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunk: {fileID: 5772911601796308467, guid: 1b72a22f990b3a6448afe44e4d797e1b, type: 3}
+  starterChunks:
+  - {fileID: 5772911601796308467, guid: 152b197127e9caa409cb9bedbf80ed70, type: 3}
+  - {fileID: 5772911601796308467, guid: bfbe6986e030c3646a89cac5d0e4f919, type: 3}
+  entranceChunks:
+  - {fileID: 5772911601796308467, guid: 1b72a22f990b3a6448afe44e4d797e1b, type: 3}
+  - {fileID: 5772911601796308467, guid: 07ed44eb16394aa4abd1075b6247affc, type: 3}
+  blankyBiomeChunks:
+  - {fileID: 5772911601796308467, guid: 1b72a22f990b3a6448afe44e4d797e1b, type: 3}
+  forestBiomeChunks:
+  - {fileID: 0}
+  icicleBiomeChunks: []
 --- !u!4 &1102743842815459817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 815056c4ae596624fb9686a39df39d01, type: 3}

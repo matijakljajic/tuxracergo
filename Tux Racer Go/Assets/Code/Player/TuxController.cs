@@ -11,27 +11,44 @@ public class TuxController : MonoBehaviour
     [SerializeField] public float worldSpeed;
     [SerializeField] public float moveSpeed;
 
-    // Start is called before the first frame update
+    private bool isGrounded;
+
     void Start()
     {
         player = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        
+        // Can't turn but can accelerate / break mid-air because I think it's like that in the original Tux Racer.
+
+        if (isGrounded)
+        {
+            handleTurning();
+        }
+
         handleAcceleration();
         handleBreaking();
-        handleTurning();
-        modifyGravity();
 
+        fakeSlope();
+        modifyGravity();
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.contacts.Length > 0)
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
     }
 
     private void handleAcceleration()
     {
-        fakeSlope();
-
         if (Input.GetKey(KeyCode.W))
         {
             player.AddForce(Vector3.forward * moveSpeed);
@@ -42,7 +59,7 @@ public class TuxController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
         {
-                player.AddForce(Vector3.back * (worldSpeed / 2));
+            player.AddForce(Vector3.back * (worldSpeed / 2));
         }
     }
 
@@ -51,11 +68,11 @@ public class TuxController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            player.AddRelativeForce(Vector3.right * moveSpeed * 0.5f);
+            player.AddForce(Vector3.right * moveSpeed);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            player.AddRelativeForce(Vector3.left * moveSpeed * 0.5f);
+            player.AddForce(Vector3.left * moveSpeed);
         }
     }
 
