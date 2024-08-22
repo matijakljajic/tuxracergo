@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Adds rotation constraint to an object. Fixes ramp shenanigans.
+/// Adds X axis rotation constraint to an object. Cheaply fixes some physics shenanigans.
 /// </summary>
 public class RotationConstrainer : MonoBehaviour
 {
-    [SerializeField] public float minXRotation = -45f;
-    [SerializeField] public float maxXRotation = 45f;
+    [SerializeField] public float minXRotation;
+    [SerializeField] public float maxXRotation;
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         Vector3 currentRotation = transform.localEulerAngles;
 

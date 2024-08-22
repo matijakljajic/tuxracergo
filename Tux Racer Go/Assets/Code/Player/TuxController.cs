@@ -4,6 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
+/// <summary>
+/// Physics based control system for our player.
+/// </summary>
 public class TuxController : MonoBehaviour
 {
     private Rigidbody player;
@@ -24,19 +27,19 @@ public class TuxController : MonoBehaviour
 
         if (isGrounded)
         {
-            handleTurning();
+            HandleTurning();
         }
 
-        handleAcceleration();
-        handleBreaking();
+        HandleAcceleration();
+        HandleBreaking();
 
-        fakeSlope();
-        modifyGravity();
+        FakeSlope();
+        ModifyGravity();
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.contacts.Length > 0)
+        if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
         }
@@ -47,7 +50,7 @@ public class TuxController : MonoBehaviour
         isGrounded = false;
     }
 
-    private void handleAcceleration()
+    private void HandleAcceleration()
     {
         if (Input.GetKey(KeyCode.W))
         {
@@ -55,7 +58,7 @@ public class TuxController : MonoBehaviour
         }
     }
 
-    private void handleBreaking()
+    private void HandleBreaking()
     {
         if (Input.GetKey(KeyCode.S))
         {
@@ -63,9 +66,8 @@ public class TuxController : MonoBehaviour
         }
     }
 
-    private void handleTurning()
+    private void HandleTurning()
     {
-
         if (Input.GetKey(KeyCode.D))
         {
             player.AddForce(Vector3.right * moveSpeed);
@@ -76,12 +78,12 @@ public class TuxController : MonoBehaviour
         }
     }
 
-    private void modifyGravity() 
+    private void ModifyGravity() 
     {
         player.AddForce(Vector3.down * 1500);
     }
 
-    private void fakeSlope()
+    private void FakeSlope()
     {
         player.AddForce(Vector3.forward * worldSpeed);
     }

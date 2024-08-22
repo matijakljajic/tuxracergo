@@ -404,7 +404,7 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minXRotation: -30
-  maxXRotation: 30
+  maxXRotation: 0
 --- !u!136 &682450377612698682
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290036883150576467}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5ba07e867bbc01a4dbccd6a5998f71f6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldSpeed: 3000
-  moveSpeed: 3000
+  moveSpeed: 5000
 --- !u!114 &1295587478231382709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,11 +491,19 @@ MonoBehaviour:
   - {fileID: 5772911601796308467, guid: bfbe6986e030c3646a89cac5d0e4f919, type: 3}
   entranceChunks:
   - {fileID: 5772911601796308467, guid: 1b72a22f990b3a6448afe44e4d797e1b, type: 3}
-  - {fileID: 5772911601796308467, guid: 07ed44eb16394aa4abd1075b6247affc, type: 3}
+  - {fileID: 5772911601796308467, guid: 1244c61afb0699543b5297db1f065ba9, type: 3}
   blankyBiomeChunks:
   - {fileID: 5772911601796308467, guid: 1b72a22f990b3a6448afe44e4d797e1b, type: 3}
+  - {fileID: 5772911601796308467, guid: e5c20c8df299c4e4fb0668904cccf674, type: 3}
+  - {fileID: 5772911601796308467, guid: 3e2b4f40ebccb1242b59fabf58a62e46, type: 3}
+  - {fileID: 5772911601796308467, guid: bf097efa0bfb6a244bbf9370eceabce1, type: 3}
+  - {fileID: 5772911601796308467, guid: 1fbca5d0a4bd942488f09ef3c689cff5, type: 3}
   forestBiomeChunks:
-  - {fileID: 0}
+  - {fileID: 5772911601796308467, guid: 1244c61afb0699543b5297db1f065ba9, type: 3}
+  - {fileID: 5772911601796308467, guid: cb8f9633937aa64489a73ab9f8fdc5c2, type: 3}
+  - {fileID: 5772911601796308467, guid: 07ed44eb16394aa4abd1075b6247affc, type: 3}
+  - {fileID: 5772911601796308467, guid: 8aa8d00966f22134d9c716bb82bd965c, type: 3}
+  - {fileID: 5772911601796308467, guid: 5c204cbafa959164fa3d7fbb727c5b78, type: 3}
   icicleBiomeChunks: []
 --- !u!4 &1102743842815459817 stripped
 Transform:

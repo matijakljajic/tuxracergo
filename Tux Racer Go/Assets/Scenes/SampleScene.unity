@@ -331,29 +331,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 132406421865115286, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: chunks.Array.data[0]
-      value: 
-      objectReference: {fileID: 7213961996620609217, guid: fcb83d18e16fc454484a42c886540405, type: 3}
-    - target: {fileID: 132406421865115286, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: chunks.Array.data[1]
-      value: 
-      objectReference: {fileID: 5772911601796308467, guid: 1b72a22f990b3a6448afe44e4d797e1b, type: 3}
     - target: {fileID: 792900322023636742, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2543847758234255989, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: m_Constraints
-      value: 96
-      objectReference: {fileID: 0}
-    - target: {fileID: 2543847758234255989, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: m_ImplicitCom
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2543847758234255989, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: m_CenterOfMass.z
-      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3467617684883920174, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -395,20 +375,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5138857632919424148, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: chunk
-      value: 
-      objectReference: {fileID: 5772911601796308467, guid: 1b72a22f990b3a6448afe44e4d797e1b, type: 3}
-    - target: {fileID: 8039096712965401415, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: moveSpeed
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039096712965401415, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
-      propertyPath: worldSpeed
-      value: 3000
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1395721913299461598, guid: bae577a36d9405a48a43464e730cc3c3, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
