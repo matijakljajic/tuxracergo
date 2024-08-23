@@ -39,7 +39,7 @@ public class TuxController : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Ice"))
         {
             isGrounded = true;
         }

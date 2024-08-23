@@ -8,6 +8,7 @@ TagManager:
   - Chunk Destruction
   - Collectable
   - Ground
+  - Ice
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - SnowFX
   - 
   - 
   - 
