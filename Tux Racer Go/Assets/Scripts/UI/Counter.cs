@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class Counter : MonoBehaviour
 {
     [SerializeField] public GameManager gameManager;
+    [SerializeField] private string prefix;
 
     void Update()
     {
-        gameObject.GetComponent<Text>().text = gameManager.herringCollected.ToString();
+        gameObject.GetComponent<Text>().text = string.Concat(prefix, gameManager.herringCollected.ToString());
     }
 
 }

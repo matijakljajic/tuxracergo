@@ -4,12 +4,29 @@ using UnityEngine;
 
 public class HittableCollision : MonoBehaviour
 {
+    [SerializeField] public Canvas canvasToHide;
+    [SerializeField] public Canvas canvasToShow;
+
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Hittable"))
         {
-            Debug.Log("Player: Hit something!");
-            FindObjectOfType<AudioManager>().Play("Hit");
+            audioManager.Play("Hit");
+            audioManager.Stop("RaceTheme");
+            audioManager.Stop("SnowSlide");
+            audioManager.Stop("IceSlide");
+
+            Time.timeScale = 0f;
+
+            canvasToHide.gameObject.SetActive(false);
+            canvasToShow.gameObject.SetActive(true);
         }
     }
 

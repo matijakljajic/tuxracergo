@@ -6,13 +6,17 @@ public class GameManager : MonoBehaviour
 {
 
     public int herringCollected;
-
-    public bool timerIsRunning;
+    public float elapsedTime;
 
     private void Awake()
     {
         herringCollected = 0;
-        timerIsRunning = true;
+        elapsedTime = 0f;
+    }
+
+    private void Update()
+    {
+        elapsedTime += Time.deltaTime;
     }
 
 }
