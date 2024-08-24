@@ -9,6 +9,7 @@ TagManager:
   - Collectable
   - Ground
   - Ice
+  - Hittable
   layers:
   - Default
   - TransparentFX

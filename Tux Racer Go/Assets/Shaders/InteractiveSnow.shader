@@ -41,9 +41,6 @@ Shader "ToonlySnow" {
 
 		CGPROGRAM
 
-
-		// custom lighting function that uses a texture ramp based
-		// on angle between light direction and normal
 		#pragma surface surf ToonRamp vertex:vert addshadow nolightmap tessellate:tessDistance fullforwardshadows
 		#pragma target 4.0
 		#pragma require tessellation tessHW
@@ -107,36 +104,30 @@ Shader "ToonlySnow" {
 
 		struct Input {
 			float2 uv_MainTex : TEXCOORD0;
-			float3 worldPos; // world position built-in value
-			float3 viewDir;// view direction built-in value we're using for rimlight
+			float3 worldPos;
+			float3 viewDir;
 		};
 
 		void vert(inout appdata_full v)
 		{	
-			
 			float3 worldPosition = mul(unity_ObjectToWorld, v.vertex).xyz;
-			// Effects RenderTexture Reading
+			
 			float2 uv = worldPosition.xz - _Position.xz;
 			uv = uv / (_OrthographicCamSize * 2);
 			uv += 0.5;			
 			float4 RTEffect = tex2Dlod(_GlobalEffectRT, float4(uv, 0, 0));
 			
-			// smoothstep edges to prevent bleeding
 			RTEffect *=  smoothstep(0.99, 0.9, uv.x) * smoothstep(0.99, 0.9,1- uv.x);
 			RTEffect *=  smoothstep(0.99, 0.9, uv.y) * smoothstep(0.99, 0.9,1- uv.y);
 			
-			// Snow Noise in worldSpace
 			float SnowNoise = tex2Dlod(_Noise, float4(worldPosition.xz * _NoiseScale, 0, 0));
 			
-			// move vertices up where snow is, and where there is no path	
 			v.vertex.xyz += normalize(v.normal) *(_SnowHeight + (SnowNoise * _NoiseWeight)) * saturate(1-RTEffect.g * _SnowPathStrength);
-
 		}
 
 
 
 		void surf(Input IN, inout SurfaceOutput o) {
-			// Effects RenderTexture Reading
 			float2 uv = IN.worldPos.xz - _Position.xz;
 			uv /= (_OrthographicCamSize * 2);
 			uv += 0.5;
@@ -144,31 +135,22 @@ Shader "ToonlySnow" {
 			float4 effect = tex2D(_GlobalEffectRT, float2 (uv.x, uv.y));
 			effect *=  smoothstep(0.99, 0.9, uv.x) * smoothstep(0.99, 0.9,1- uv.x);
 			effect *=  smoothstep(0.99, 0.9, uv.y) * smoothstep(0.99, 0.9,1- uv.y);
-			
-			// worldspace Noise texture
+
 			float3 noisetexture = tex2D(_Noise, IN.worldPos.zx * _NoiseScale);
-
-			// worldspace Snow texture
+	
 			float3 snowtexture = tex2D(_MainTex, IN.worldPos.zx * _SnowTextureScale);
-
-			// rim light for snow, blending in the noise texture 
+	
 			half rim = 1.0 - dot(normalize(IN.viewDir), o.Normal) * noisetexture;
 			float3 coloredRim =  _RimColor * pow(rim, _RimPower);
 
-			//lerp between snow color and snow texture
 			float3 mainColors = lerp(_Color,snowtexture * _Color, _SnowTextureOpacity);
-			//lerp the colors using the RT effect path 
+	
 			float3 path = lerp(_PathColorOut * effect.g,_PathColorIn, saturate(effect.g * _PathBlending));
 			o.Albedo = lerp(mainColors,path, saturate(effect.g));
-						
-			// sparkles in worldspace
+
 			float sparklesStatic = tex2D(_SparkleNoise, IN.worldPos.xz * _SparkleScale).r;
-			// cutoff and where there is no path
-			float cutoffSparkles = step(_SparkCutoff,sparklesStatic  *(1- saturate(effect.g)));			
-			// add a glow and sparkles on the snow
+			float cutoffSparkles = step(_SparkCutoff,sparklesStatic  *(1- saturate(effect.g)));
 			o.Emission = coloredRim + (cutoffSparkles * 4) ;
-
-
 		}
 		ENDCG
 

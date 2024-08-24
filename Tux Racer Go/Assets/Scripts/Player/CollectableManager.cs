@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class CollectableManager : MonoBehaviour
 {
-    private int herrigns_Collected;
-    
+    private GameManager gameManager;
+    private AudioManager audioManager;
+
     private void Start()
     {
-        herrigns_Collected = 0;
+        gameManager = FindObjectOfType<GameManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag.Equals("Collectable"))
         {
-            herrigns_Collected++;
+            gameManager.herringCollected++;
+            audioManager.Play("PickUp" + Random.Range(1, 3));
             Destroy(other.gameObject);
         }
     }

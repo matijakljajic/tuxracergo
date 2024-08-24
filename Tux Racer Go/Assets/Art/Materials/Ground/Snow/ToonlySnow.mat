@@ -42,7 +42,7 @@ Material:
     - _NoiseWeight: 0.01
     - _PathBlending: 1
     - _RimPower: 20
-    - _SnowHeight: 0.4
+    - _SnowHeight: 0.5
     - _SnowPathStrength: 0.72
     - _SnowTextureOpacity: 1
     - _SnowTextureScale: 1

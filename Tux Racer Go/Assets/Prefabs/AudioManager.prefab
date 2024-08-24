@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6743251007288039228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7073194729776107151}
+  - component: {fileID: 179067119618408234}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7073194729776107151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743251007288039228}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2681456613227973363}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179067119618408234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743251007288039228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8cf9a2b50f044345a7d49aea86b1753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+  sounds:
+  - name: Hit
+    clip: {fileID: 8300000, guid: 52f2ff142d60b7f4fa4d9235f2b6bd3b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.05
+    loop: 0
+    mixerGroup: {fileID: 2163571196948295292, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: SnowSlide
+    clip: {fileID: 8300000, guid: 38a0ce02d6acda748abe0749e958c0c2, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.05
+    loop: 1
+    mixerGroup: {fileID: 2163571196948295292, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: IceSlide
+    clip: {fileID: 8300000, guid: 254582bd0c930004ba3f098f725db43d, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.05
+    loop: 1
+    mixerGroup: {fileID: 2163571196948295292, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: PickUp1
+    clip: {fileID: 8300000, guid: 4462ea318d1e9ea4cbe1fa40ee76c5a8, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.05
+    loop: 0
+    mixerGroup: {fileID: 2163571196948295292, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: PickUp2
+    clip: {fileID: 8300000, guid: c9e126270ecc2054aa004f9754cf1538, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.05
+    loop: 0
+    mixerGroup: {fileID: 2163571196948295292, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: PickUp3
+    clip: {fileID: 8300000, guid: 7e3418956abf4d1458509e0e9d2572c2, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.05
+    loop: 0
+    mixerGroup: {fileID: 2163571196948295292, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: RaceTheme
+    clip: {fileID: 8300000, guid: 7b6a9b7ee7a4c1e40a557866980ae33e, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 1185368633519202112, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: RaceWinnerTheme
+    clip: {fileID: 8300000, guid: a1f920afd3336ab4bbf1f602d054547f, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 1185368633519202112, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: RaceLoserTheme
+    clip: {fileID: 8300000, guid: 935e7a9a9a4de014ab3cdf07792f36db, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 1185368633519202112, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: d9c24ce20cafd6240b34d9b253ccba62, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 1185368633519202112, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+  - name: ConfigTheme
+    clip: {fileID: 8300000, guid: bf077d0bdab92e340a6132f0db6c72cc, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 1185368633519202112, guid: 3280ac27eecb94f409a01809514b6a11, type: 2}
+    source: {fileID: 0}
+--- !u!1 &7153182597932210120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2681456613227973363}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2681456613227973363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7153182597932210120}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 93.72922, y: 49.39868, z: -128.31001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7073194729776107151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
