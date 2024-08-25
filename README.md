@@ -5,15 +5,17 @@
 
 ### What is it?
 
-Tux Racer Go is a [Tux Racer](https://en.wikipedia.org/wiki/Tux_Racer) clone which utilizes endless runner type of gameplay. Some screenshots can be found [here](https://github.com/matijakljajic/tuxracergo/tree/main/Screenshots) and you can try it out yourself by downloading [the latest version](https://github.com/matijakljajic/tuxracergo/releases/latest).
+Tux Racer Go is a [Tux Racer](https://en.wikipedia.org/wiki/Tux_Racer) clone/remake which utilizes endless runner type of gameplay. Some screenshots can be found [here](https://github.com/matijakljajic/tuxracergo/tree/main/Screenshots) and you can try it out yourself by downloading [the latest version](https://github.com/matijakljajic/tuxracergo/releases/latest).
 
 ### Controls
 
-- __W__ - _Speed Up_
-- __A__ - _Turn Left_
-- __S__ - _Slow Down_
-- __D__ - _Turn Right_
-- __E__ - _Jump_ (Hold the key)
+You can:
+- Press `W` to _speed up_
+- Press `A` to _turn left_
+- Press `S` to _slow down_
+- Press `D` to _turn right_
+- Press `E` to _jump_ (you need to hold it for a higher jump)
+- Press `ESC` to _pause and open a correlated menu_
 
 ### Credits
 
