@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] public GameManager gameManager;
-    [SerializeField] public AudioManager audioManager;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private AudioManager audioManager;
 
     private void OnEnable()
     {

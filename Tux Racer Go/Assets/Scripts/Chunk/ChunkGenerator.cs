@@ -10,11 +10,11 @@ using UnityEngine;
 public class ChunkGenerator : MonoBehaviour
 {
 
-    [SerializeField] public List<GameObject> starterChunks;
-    [SerializeField] public List<GameObject> entranceChunks;
-    [SerializeField] public List<GameObject> blankyBiomeChunks;
-    [SerializeField] public List<GameObject> forestBiomeChunks;
-    [SerializeField] public List<GameObject> icicleBiomeChunks;
+    [SerializeField] private List<GameObject> starterChunks;
+    [SerializeField] private List<GameObject> entranceChunks;
+    [SerializeField] private List<GameObject> blankyBiomeChunks;
+    [SerializeField] private List<GameObject> forestBiomeChunks;
+    [SerializeField] private List<GameObject> icicleBiomeChunks;
     
     private int biomeType;
     private int biomeChunkCount;

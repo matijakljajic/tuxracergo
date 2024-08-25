@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
-    [SerializeField] public GameManager gameManager;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private string prefix;
 
     void Update()

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HittableCollision : MonoBehaviour
 {
-    [SerializeField] public Canvas canvasToHide;
-    [SerializeField] public Canvas canvasToShow;
+    [SerializeField] private Canvas canvasToHide;
+    [SerializeField] private Canvas canvasToShow;
 
     private AudioManager audioManager;
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
 
-    [SerializeField] public GameManager gameManager;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private string prefix;
 
     private void Update()

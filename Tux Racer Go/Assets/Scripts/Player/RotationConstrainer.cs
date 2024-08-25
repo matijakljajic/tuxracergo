@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class RotationConstrainer : MonoBehaviour
 {
-    [SerializeField] public float minXRotation;
-    [SerializeField] public float maxXRotation;
+    [SerializeField] private float minXRotation;
+    [SerializeField] private float maxXRotation;
 
     void LateUpdate()
     {

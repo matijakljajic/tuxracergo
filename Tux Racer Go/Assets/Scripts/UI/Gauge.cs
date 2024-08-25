@@ -6,14 +6,13 @@ using UnityEngine.UI;
 
 public class Gauge : MonoBehaviour
 {
-    [SerializeField] Rigidbody rb;
-    [SerializeField] TuxController tux;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private TuxController tux;
 
-    [SerializeField] Text text;
-    [SerializeField] Image speedGauge;
-    [SerializeField] Image jumpGauge;
+    [SerializeField] private Text text;
+    [SerializeField] private Image speedGauge;
+    [SerializeField] private Image jumpGauge;
 
-    // Update is called once per frame
     void Update()
     {
         int speedVal = (int) Mathf.Round(rb.velocity.magnitude / 2);

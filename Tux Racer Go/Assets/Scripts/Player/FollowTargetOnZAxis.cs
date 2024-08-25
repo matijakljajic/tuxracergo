@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowTargetOnZAxis : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    [SerializeField] private Transform target;
 
     void FixedUpdate()
     {

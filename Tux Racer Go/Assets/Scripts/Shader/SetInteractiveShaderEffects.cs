@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SetInteractiveShaderEffects : MonoBehaviour
 {
-    [SerializeField] RenderTexture rt;
-    [SerializeField] Transform target;
+    [SerializeField] private RenderTexture rt;
+    [SerializeField] private Transform target;
 
     void Awake()
     {
