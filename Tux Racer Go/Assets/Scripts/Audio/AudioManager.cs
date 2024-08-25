@@ -64,4 +64,31 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void Resume(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            return;
+        }
+
+        s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+        s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+        s.source.UnPause();
+    }
+
+    public void Pause(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            return;
+        }
+        if (s.source.isPlaying)
+        {
+            s.source.Pause();
+        }
+    }
+
 }

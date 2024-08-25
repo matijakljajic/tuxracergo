@@ -10,9 +10,10 @@ Tux Racer Go is a [Tux Racer](https://en.wikipedia.org/wiki/Tux_Racer) clone whi
 ### Controls
 
 - __W__ - _Speed Up_
-- __A__ - _Go Left_
+- __A__ - _Turn Left_
 - __S__ - _Slow Down_
-- __D__ - _Go Right_
+- __D__ - _Turn Right_
+- __E__ - _Jump_ (Hold the key)
 
 ### Credits
 

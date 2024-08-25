@@ -7,14 +7,20 @@ using UnityEngine.UI;
 public class Gauge : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
+    [SerializeField] TuxController tux;
+
     [SerializeField] Text text;
-    [SerializeField] Image image;
+    [SerializeField] Image speedGauge;
+    [SerializeField] Image jumpGauge;
 
     // Update is called once per frame
     void Update()
     {
-        int value = (int) Mathf.Round(rb.velocity.magnitude / 2);
-        text.text = value.ToString();
-        image.fillAmount = value / 200f;
+        int speedVal = (int) Mathf.Round(rb.velocity.magnitude / 2);
+        float jumpVal = tux.chargeTime;
+
+        text.text = speedVal.ToString();
+        speedGauge.fillAmount = speedVal / 200f;
+        jumpGauge.fillAmount = jumpVal / 3f;
     }
 }

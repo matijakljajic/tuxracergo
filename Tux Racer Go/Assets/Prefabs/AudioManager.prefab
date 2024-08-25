@@ -58,7 +58,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SnowSlide
     clip: {fileID: 8300000, guid: 38a0ce02d6acda748abe0749e958c0c2, type: 3}
-    volume: 1
+    volume: 0.4
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.05
@@ -67,7 +67,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: IceSlide
     clip: {fileID: 8300000, guid: 254582bd0c930004ba3f098f725db43d, type: 3}
-    volume: 1
+    volume: 0.8
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0.05
