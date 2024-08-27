@@ -1,13 +1,15 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/matijakljajic/tuxracergo/main/Tux%20Racer%20Go/Assets/Art/Textures/UI/Logo.png" alt="Tux Racer Go - Logo">
-  <h1 align="center" style="margin: 0 auto 0 auto;">Tux Racer Go</h1>
-</p>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/matijakljajic/tuxracergo/archived-uni-ver/Tux%20Racer%20Go/Assets/Art/Textures/UI/Logo.png" alt="Tux Racer Go - Logo">
+</div>
 
-### What is it?
+# Tux Racer Go
 
-Tux Racer Go is a [Tux Racer](https://en.wikipedia.org/wiki/Tux_Racer) clone/remake which utilizes endless runner type of gameplay. Some screenshots can be found [here](https://github.com/matijakljajic/tuxracergo/tree/main/Screenshots) and you can try it out yourself by downloading [the latest version](https://github.com/matijakljajic/tuxracergo/releases/latest).
+[![Download](https://img.shields.io/badge/Download-2ea44f?style=for-the-badge)](https://github.com/matijakljajic/tuxracergo/releases/tag/v0.1.1) [![Developer](https://img.shields.io/badge/Developer-2ea44f?style=for-the-badge)](https://matijakljajic.github.io/) [![Views](https://img.shields.io/endpoint?style=for-the-badge&color=2ea44f&label=Views&url=https%3A%2F%2Fhits.dwyl.com%2Fmatijakljajic%2Ftuxracergo.json)](https://github.com/matijakljajic/tuxracergo) [![Stars](https://img.shields.io/github/stars/matijakljajic/tuxracergo?style=for-the-badge&color=2ea44f&label=Stars)](https://github.com/matijakljajic/tuxracergo/stargazers)
 
-### Controls
+
+Tux Racer Go is a [Tux Racer](https://en.wikipedia.org/wiki/Tux_Racer) clone/remake with endless-runner gameplay. This branch contains the version developed for a university course. You can try it by downloading the build using the Download button above. Try to collect as many herring as possible before you crash into a tree or an icicle.
+
+## Controls
 
 You can:
 - Press `W` to _speed up_
@@ -17,12 +19,16 @@ You can:
 - Press `E` to _jump_ (you need to hold it for a higher jump)
 - Press `ESC` to _pause and open a correlated menu_
 
-### Credits
+## Screenshots
+
+![Gameplay screenshots](Screenshots/readme-combined.png)
+
+## Credits
 
 Music from the original open-source game can be found here, music is composed by:
 - Joseph Toscano: <scarjt@pcom.net>
 - K. Schroeder: <kschroeder@mirageworks.com>
 
-### License
+## License
 
-Code found in this repository is licensed under [GPLv3](https://raw.githubusercontent.com/matijakljajic/tuxracergo/main/LICENSE).
+Code found in this repository is licensed under [GPLv3](LICENSE).
