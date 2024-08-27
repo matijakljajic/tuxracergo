@@ -5,7 +5,7 @@
 
 ### What is it?
 
-Tux Racer Go is a [Tux Racer](https://en.wikipedia.org/wiki/Tux_Racer) clone/remake which utilizes endless runner type of gameplay. Some screenshots can be found [here](https://github.com/matijakljajic/tuxracergo/tree/main/Screenshots) and you can try it out yourself by downloading [the latest version](https://github.com/matijakljajic/tuxracergo/releases/latest).
+Tux Racer Go is a [Tux Racer](https://en.wikipedia.org/wiki/Tux_Racer) clone/remake which utilizes endless runner type of gameplay. You can try it out yourself by downloading [the latest version](https://github.com/matijakljajic/tuxracergo/releases/latest). Try to collect as many herring as you can before you bump into a tree or an icicle.
 
 ### Controls
 
@@ -16,6 +16,12 @@ You can:
 - Press `D` to _turn right_
 - Press `E` to _jump_ (you need to hold it for a higher jump)
 - Press `ESC` to _pause and open a correlated menu_
+
+### Screenshots
+
+![Screenshot #1](https://raw.githubusercontent.com/matijakljajic/tuxracergo/main/Screenshots/trg-1.png)
+![Screenshot #2](https://raw.githubusercontent.com/matijakljajic/tuxracergo/main/Screenshots/trg-2.png)
+![Screenshot #3](https://raw.githubusercontent.com/matijakljajic/tuxracergo/main/Screenshots/trg-3.png)
 
 ### Credits
 
